@@ -1,46 +1,22 @@
 import java.util.Scanner;
-import Importação.matematica;
+import lib.PirateTest;
+import lib.Matematica;
 
 public class Teste {
- public static void main (String[] args){
-Matematica matematica = new Matematica();
-double NumeroDois;
-double NumeroUm;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-Scanner scanner = new Scanner(System.in);
+        PirateTest.expect(Matematica.soma(2, 1), 3);
+        PirateTest.expect(Matematica.soma(12, 24, 1), 37);
+        PirateTest.expect(Matematica.subtracao(12, 24), -12);
+        PirateTest.expect(Matematica.porcentagem(12, 20), 2.4);
+        // PirateTest.expect(Matematica.conversorGraus(33.8), 1);
+        // PirateTest.expect(Matematica.mediaHarmonica(3, 2, 1), 2);
+        // PirateTest.expect(Matematica.mediaGeometrica(3, 2, 1), 2);
+        // PirateTest.expect(Matematica.mediaAritm(3, 2, 1), 2);
+        // PirateTest.expect(Matematica.mediaAritm(3, 3), 3);
+        // PirateTest.expect(Matematica.inverteNumero(6742), 2476);
 
-System.out.println("Escreva o primeiro valor:");
-NumeroUm = scanner.nextInt();
-
-System.out.println("Escreva o segundo valor:");
-NumeroDois = scanner.nextInt();
-
-System.out.println("a soma de ambos e:" + matematica.Soma2(NumeroUm,NumeroDois));
-System.out.println("a subtração de ambos e:" + matematica.Subtracao(NumeroUm,NumeroDois));
-System.out.println("a media de ambos e:" + matematica.MediaAritm2(NumeroUm,NumeroDois));
-
-
-
-
-
-scanner.close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- }
+        scanner.close();
+    }
 }
