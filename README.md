@@ -1,4 +1,4 @@
-# Lista de Exercícios I: Estrutura Sequencial
+# Lista de Exercícios IV
 
 | Nome                           | RA         |
 | ------------------------------ | ---------- |
