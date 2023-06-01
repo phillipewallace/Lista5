@@ -1,5 +1,7 @@
 package lib;
 
+import java.text.DecimalFormat;
+
 public class Matematica {
 
     public static double soma(double... valores) {
@@ -114,6 +116,28 @@ public class Matematica {
             }
             System.out.println();
         }
+    }
+
+    public static double somaImposto(double custo, double taxaEmDecimal) {
+        return custo * (1 + taxaEmDecimal);
+    }
+
+    public static double somaImposto(double custo, String porcentagemComSimbolo) {
+        try {
+            double taxaDecimal = Double.parseDouble(porcentagemComSimbolo.replace("%", ""));
+            return custo * (1 + (taxaDecimal / 100));
+        } catch (EnumConstantNotPresentException error) {
+            throw new Error("Não foi possível interpretar o número informado.");
+        }
+    }
+
+    public static String inverteNumero(String numero) {
+        String resultado = "";
+        String[] numeros = numero.split("");
+        int contador = numeros.length;
+        while (contador-- > 0)
+            resultado += numeros[contador];
+        return resultado;
     }
 
     public static int inverteNumero(int numero) {
