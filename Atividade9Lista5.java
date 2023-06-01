@@ -5,7 +5,7 @@ public class Atividade9Lista5 {
     public static void main(String[] args) {
         Scanner sca = new Scanner(System.in);
         System.out.println("Informe um número inteiro:");
-        int numeroInformado = sca.nextInt();
+        String numeroInformado = sca.nextLine();
         System.out.println(Matematica.inverteNumero(numeroInformado));
         sca.close();
     }
